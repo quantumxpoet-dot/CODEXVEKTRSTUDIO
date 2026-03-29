@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Vektr Studio</string>
+    <string name="title_activity_main">Vektr Studio</string>
+    <string name="package_name">com.vektr.studio</string>
+    <string name="custom_url_scheme">com.vektr.studio</string>
+</resources>

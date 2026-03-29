@@ -1,0 +1,33 @@
+{
+  "name": "vektr-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "android:sync": "npm run build && npx.cmd cap sync android",
+    "android:open": "npx.cmd cap open android",
+    "apk:debug": "npm run android:sync && powershell -NoProfile -ExecutionPolicy Bypass -Command \"Set-Location android; .\\gradlew.bat assembleDebug\"",
+    "apk:release": "npm run android:sync && powershell -NoProfile -ExecutionPolicy Bypass -Command \"Set-Location android; .\\gradlew.bat assembleRelease\"",
+    "aab:release": "npm run android:sync && powershell -NoProfile -ExecutionPolicy Bypass -Command \"Set-Location android; .\\gradlew.bat bundleRelease\""
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "motion": "^12.4.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.9.3",
+    "vite": "^6.0.7"
+  }
+}
